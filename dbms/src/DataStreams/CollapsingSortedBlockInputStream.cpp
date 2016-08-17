@@ -50,11 +50,11 @@ void CollapsingSortedBlockInputStream::insertRows(ColumnPlainPtrs & merged_colum
 			{
 				LOG_INFO(log, "All rows collapsed");
 				++merged_rows;
-				for (size_t i = 0; i < num_columns; ++i)
-					merged_columns[i]->insertFrom(*last_positive.columns[i], last_positive.row_num);
+				//for (size_t i = 0; i < num_columns; ++i)
+				//	merged_columns[i]->insertFrom(*last_positive.columns[i], last_positive.row_num);
 				++merged_rows;
-				for (size_t i = 0; i < num_columns; ++i)
-					merged_columns[i]->insertFrom(*last_negative.columns[i], last_negative.row_num);
+				//for (size_t i = 0; i < num_columns; ++i)
+				//	merged_columns[i]->insertFrom(*last_negative.columns[i], last_negative.row_num);
 			}
 			return;
 		}
