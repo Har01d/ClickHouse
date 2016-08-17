@@ -570,8 +570,8 @@ MergeTreeData::MutableDataPartPtr MergeTreeDataMerger::mergePartsToTemporaryPart
 	new_data_part->index.swap(to.getIndex());
 
 	/// Для удобства, даже CollapsingSortedBlockInputStream не может выдать ноль строк.
-	if (0 == to.marksCount())
-		throw Exception("Empty part after merge", ErrorCodes::LOGICAL_ERROR);
+	//if (0 == to.marksCount())
+	//	throw Exception("Empty part after merge", ErrorCodes::LOGICAL_ERROR);
 
 	new_data_part->size = to.marksCount();
 	new_data_part->modification_time = time(0);
